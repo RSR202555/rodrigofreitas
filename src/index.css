@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #0E6E60 transparent;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #0E6E60;
+    border-radius: 20px;
+  }
+  
+  body {
+    @apply font-sans bg-[#FCFBFA] text-[#0E1720] overflow-x-hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#0E1720] to-[#5B6B7A];
+  }
+  
+  .text-gradient-cta {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#0E6E60] to-[#148A79];
+  }
+
+  .glass-panel {
+    @apply bg-white/70 backdrop-blur-xl border border-white/50 shadow-[0_8px_32px_0_rgba(14,23,32,0.05)];
+  }
+  
+  .glass-card {
+    @apply bg-white/60 backdrop-blur-lg border border-white/50 rounded-[2.5rem] shadow-[0_10px_40px_-15px_rgba(14,23,32,0.08)];
+  }
+}
+
+/* Custom Mesh Gradient Animation (Teal/Navy Soft) */
+.mesh-bg {
+  background-color: #FCFBFA;
+  background-image: 
+    radial-gradient(at 0% 0%, hsla(170, 77%, 85%, 0.4) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(208, 50%, 90%, 0.5) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, hsla(170, 77%, 90%, 0.3) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(208, 50%, 85%, 0.4) 0px, transparent 50%);
+  animation: breathe 10s ease-in-out infinite alternate;
+}
+
+@keyframes breathe {
+  0% { opacity: 0.6; }
+  100% { opacity: 1; transform: scale(1.05); }
+}
