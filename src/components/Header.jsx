@@ -24,15 +24,15 @@ const Header = () => {
     <header 
       className={`fixed top-0 w-full z-50 transition-all duration-500 ease-in-out ${
         scrolled 
-          ? 'glass-panel border-x-0 border-t-0 py-3' 
-          : 'bg-transparent py-6'
+          ? 'glass-panel border-x-0 border-t-0 py-2' 
+          : 'bg-transparent py-4'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="flex justify-between items-center py-2">
+        <div className="flex justify-between items-center py-1">
           <div className="flex-shrink-0 flex items-center">
             <a href="#" className="flex items-center">
-              <img src="/logo.jpeg" alt="Alivia Dor" className="h-16 sm:h-20 w-auto mix-blend-darken" />
+              <img src="/logo.png" alt="Alivia Dor" className="h-14 sm:h-16 w-auto object-contain" />
             </a>
           </div>
 

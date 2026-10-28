@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto flex flex-col items-center">
         <div className="mb-12">
           <a href="#" className="flex items-center justify-center">
-            <img src="/logo.jpeg" alt="Alivia Dor" className="h-32 sm:h-40 w-auto mix-blend-darken" />
+            <img src="/logo.png" alt="Alivia Dor" className="h-24 sm:h-32 w-auto object-contain" />
           </a>
         </div>
         
